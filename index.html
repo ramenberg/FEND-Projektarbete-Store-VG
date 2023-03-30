@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FEND Projektarbete Webshop</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+			integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+			crossorigin="anonymous" />
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+			integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<div class="upper-gradient" id="upper-gradient-box">
+			<!--Navbar start-->
+			<div id="navbar"></div>
+			<!-- navbar end-->
+			<div class="container md-12 mt-5">
+				<div class="upper-slogan">
+					<h1 class="main">Välkommen till Fake Store!</h1>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Produkter</h1>
+					</div>
+				</div>
+				<div class="row" id="produkter">
+					<!-- Produkter -->
+				</div>
+			</div>
+			<div id="footer"></div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('#navbar').load('dom/nav.html');
+				$('#footer').load('dom/footer.html');
+			});
+		</script>
+		<script src="js/jquery-products.js"></script>
+	</body>
+</html>

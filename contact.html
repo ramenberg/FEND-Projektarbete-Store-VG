@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kontakta oss på Fake Store</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+			integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+			crossorigin="anonymous" />
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+			integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="upper-gradient" id="upper-gradient-box">
+			<!--Navbar start-->
+			<div id="navbar"></div>
+			<!-- navbar end-->
+			<div class="container md-12 mt-5">
+				<div class="upper-slogan">
+					<h1>Kontakta oss på Fake Store</h1>
+				</div>
+
+				<main>
+					<ul class="list-group">
+						<li class="list-group-item border-0">
+							<h5>Besöks- och leveransadress</h5>
+							<p>
+								Hittepågatan 1
+								<br />
+								123 45 Iskogenvidettberg
+							</p>
+						</li>
+						<li class="list-group-item border-0">
+							<h5>Telefon</h5>
+							<p>
+								Telefontider: helgfri Mån-Fre 09-17
+								<br />
+								08-123 45 67
+							</p>
+						</li>
+						<li class="list-group-item border-0">
+							<h5>E-post</h5>
+							<p>
+								<a href="mailto:klagomal@fejkistori.se"
+									>klagomal@fejkistori.se</a
+								>
+							</p>
+						</li>
+						<li class="list-group-item text-center border-0">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50103.2465825273!2d16.145053579321548!3d66.89418211699495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1679993891895!5m2!1ssv!2sse"
+								width="400"
+								height="400"
+								style="border: 0"
+								allowfullscreen=""
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+								class="iframe-container"></iframe>
+						</li>
+					</ul>
+				</main>
+			</div>
+			<div id="footer"></div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('#navbar').load('dom/nav.html');
+				$('#footer').load('dom/footer.html');
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+.card-img-top {
+	width: 100%;
+	height: 20vw;
+	object-fit: cover;
+}
+#upper-gradient-box {
+	max-width: 100%;
+	max-height: 400px;
+}
+.upper-gradient {
+	background-color: #0093e9;
+	background-image: linear-gradient(
+		180deg,
+		#0093e9 0%,
+		#80d0c7 50%,
+		#ffffff 100%
+	);
+}
+.footer {
+	padding-bottom: 15pt;
+}
+.container {
+	background-color: white;
+	border-radius: 5px;
+}
+h1.main {
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+h1 {
+	font-family: 'Luckiest Guy', cursive;
+	text-transform: uppercase;
+	text-align: center;
+}
+.upper-slogan {
+	margin: 40pt 0;
+	padding-top: 15pt;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+.product-image {
+	max-width: 80px;
+	height: 80px;
+	overflow: hidden;
+}
+.product-image img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+.product-image-small img {
+	max-width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: cover;
+}
+.iframe-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.iframe-container > * {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+.bg-green {
+	background-color: green;
+}
+.w-10 {
+	width: 10%;
+}
+.w-20 {
+	width: 20%;
+}
+.w-70 {
+	width: 70%;
+}

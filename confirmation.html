@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Beställningsbekräftelse</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+			integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+			crossorigin="anonymous" />
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+			integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+			crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="upper-gradient" id="upper-gradient-box">
+			<!--Navbar start-->
+			<div id="navbar"></div>
+			<!--Navbar end-->
+			<!-- Main START-->
+			<div class="container md-12 mt-5">
+				<div class="py-5">
+					<h1>Tack för din beställning!</h1>
+				</div>
+				<!-- Produktinfo BÖRJAR -->
+				<div class="row">
+					<div class="col-md-8 order-md-1 mb-4">
+						<div class="right-order-info">
+							<h4
+								class="d-flex justify-content-between align-items-center mb-3">
+								<span class="text-muted">Din beställning innehåller:</span>
+							</h4>
+							<ul class="list-group mb-3" id="confirmation-order-right-info">
+								<!-- start dom-->
+
+								<!-- end-->
+							</ul>
+						</div>
+					</div>
+					<!-- Produktinfo SLUTAR -->
+					<!-- Kundinfo börjar-->
+					<div class="col-md-4 order-md-2">
+						<h6 class="mb-3">Vi kommer att skicka till:</h6>
+						<div class="mb-3" id="confirmation-customer-info"></div>
+						<!-- Kundinfo SLUTAR-->
+					</div>
+				</div>
+			</div>
+			<!-- Main END-->
+			<div id="footer"></div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('#navbar').load('dom/nav.html');
+				$('#footer').load('dom/footer.html');
+			});
+		</script>
+		<script src="js/jquery-product.js"></script>
+		<script src="js/jquery-customer.js"></script>
+	</body>
+</html>
