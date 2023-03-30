@@ -1,0 +1,40 @@
+<div class="row border-top border-bottom justify-content-between">
+	<div class="col-12 w-100">
+		<div class="row main justify-content-between">
+			<!-- Image -->
+			<div class="col-2 cart-image">
+				<img class="img-fluid" src="${product.image}" />
+			</div>
+			<!-- Title -->
+			<div class="cart-content col-10">
+				<div class="row">
+					<div class="col">${product.title}</div>
+					<div class="col"><span class="close">&#10005;</span></div>
+				</div>
+				<!-- Quantity -->
+				<div class="row">
+					<div class="col cart-content-info">
+						<div class="col single-price">${product.price.toFixed(2)}</div>
+						<div
+							class="col d-flex align-items-center justify-content-center quantity">
+							<input
+								type="number"
+								class="form-control"
+								id="cart_quantity"
+								value="${product.quantity}"
+								min="0"
+								max="20"
+								placeholder="antal_av_varan"
+								name="cart_quantity" />
+						</div>
+						<div class="col d-flex align-items-center justify-content-center">
+							<span class="reload">&#x21bb;</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Totalpris för varan beroende på antal-->
+			<div class="col-1">${(product.price * product.quantity).toFixed(2)}</div>
+		</div>
+	</div>
+</div>

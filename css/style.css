@@ -1,3 +1,22 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.bg-green {
+	background-color: green;
+}
+.bg-blue {
+	background-color: blue;
+}
+.bg-red {
+	background-color: red;
+}
+.bg-yellow {
+	background-color: yellow;
+}
+.text-right {
+	text-align: right;
+}
 .card-img-top {
 	width: 100%;
 	height: 20vw;
@@ -74,15 +93,88 @@ h1 {
 	height: 100%;
 	width: 100%;
 }
-.bg-green {
-	background-color: green;
-}
 .w-10 {
 	width: 10%;
+}
+.w-15 {
+	width: 15%;
 }
 .w-20 {
 	width: 20%;
 }
 .w-70 {
 	width: 70%;
+}
+
+/* Single product */
+.product-description .category {
+	text-transform: uppercase;
+}
+
+.product-description .product-title {
+	font-size: 1.5rem;
+}
+.text-bold {
+	font-weight: 700;
+}
+.details-title {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.2rem;
+	color: #757575;
+}
+
+.buttons .block {
+	margin-right: 5px;
+}
+
+.quantity input {
+	border-radius: 0;
+	height: 40px;
+}
+
+.custom-btn {
+	width: 150px;
+	height: 40px;
+}
+
+/* Cart */
+.cart-image {
+	max-width: 70px;
+	height: auto;
+	display: flex;
+	text-align: center;
+	align-self: baseline;
+}
+.cart-content {
+	display: grid;
+}
+.cart-quantity-buttons {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 3fr 1fr;
+	border: 1px solid lightgray;
+}
+.single-price {
+	font-size: 0.8rem;
+}
+.cart-content-info {
+	display: grid;
+	grid-template-columns: 30px 1fr 30px;
+}
+.cart-item-title {
+	font-size: 1rem;
+	font-weight: 500;
+}
+.remove-item {
+	font-size: 1rem;
+}
+.cart-content a {
+	text-decoration: none;
+	border-bottom: none;
+}
+/* ensures the increment/decrement arrows always display */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	opacity: 1;
 }
