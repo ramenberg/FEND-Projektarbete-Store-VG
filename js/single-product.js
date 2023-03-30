@@ -64,36 +64,40 @@ $.getJSON('https://fakestoreapi.com/products/' + productId)
 			$('#single-product-info').html(productItemAllInfo);
 			$('#addToCartBtn').click(function (e) {
 				e.preventDefault();
-
-				// Kontrollera om det finns en varukorg i localstorage
-				if (localStorage.getItem('fs-cart') === null) {
-					// Om inte, skapa en tom array
-					let cart = [];
-					// lägger till antal av produkten i varukorgen
-					chosenProduct.quantity = Number($('#cart_quantity').val());
-					// Pusha den valda produkten till arrayen
-					cart.push(chosenProduct);
-					// Spara arrayen i localstorage
-					localStorage.setItem('fs-cart', JSON.stringify(cart));
-				} else {
-					// Om det finns en varukorg i localstorage, hämta den
-					let cart = JSON.parse(localStorage.getItem('fs-cart'));
-					// kontrollera om produkten redan finns i varukorgen
-					for (let i = 0; i < cart.length; i++) {
-						if (cart[i].id === chosenProduct.id) {
-							// Om produkten redan finns i varukorgen, öka antalet
-							cart[i].quantity += Number($('#cart_quantity').val());
-						} else {
-							// lägger till antal av produkten i varukorgen
+				if ($('#cart_quantity').val() > 0) {
+					// Kontrollera om det finns en varukorg i localstorage
+					if (localStorage.getItem('fs-cart') === null) {
+						// Om inte, skapa en tom array
+						let cart = [];
+						// lägger till antal av produkten i varukorgen
+						chosenProduct.quantity = Number($('#cart_quantity').val());
+						// Pusha den valda produkten till arrayen
+						cart.push(chosenProduct);
+						// Spara arrayen i localstorage
+						localStorage.setItem('fs-cart', JSON.stringify(cart));
+					} else {
+						// Om det finns en varukorg i localstorage, hämta den
+						let cart = JSON.parse(localStorage.getItem('fs-cart'));
+						// kontrollera om produkten redan finns i varukorgen
+						let productExists = false;
+						for (let i = 0; i < cart.length; i++) {
+							if (cart[i].id === chosenProduct.id) {
+								// Om produkten finns, lägg till antal av produkten i varukorgen
+								cart[i].quantity += Number($('#cart_quantity').val());
+								productExists = true;
+							}
+						}
+						// Om produkten inte finns i varukorgen, lägg till den
+						if (!productExists) {
 							chosenProduct.quantity = Number($('#cart_quantity').val());
-							// Pusha den valda produkten till arrayen
 							cart.push(chosenProduct);
 						}
 						// Spara arrayen i localstorage
 						localStorage.setItem('fs-cart', JSON.stringify(cart));
 					}
+					window.location.href = 'cart.html';
+				} else {
 				}
-				window.location.href = 'cart.html';
 			});
 		}
 	})

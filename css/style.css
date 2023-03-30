@@ -145,6 +145,7 @@ h1 {
 	display: flex;
 	text-align: center;
 	align-self: baseline;
+	padding-left: 0px;
 }
 .cart-content {
 	display: grid;
