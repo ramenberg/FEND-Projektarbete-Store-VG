@@ -62,6 +62,7 @@ $.getJSON('https://fakestoreapi.com/products/' + productId)
         </div>
         `;
 			$('#single-product-info').html(productItemAllInfo);
+
 			$('#addToCartBtn').click(function (e) {
 				e.preventDefault();
 				if ($('#cart_quantity').val() > 0) {

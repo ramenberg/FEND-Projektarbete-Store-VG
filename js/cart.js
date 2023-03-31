@@ -117,6 +117,8 @@ if (!cartItems || cartItems.length === 0) {
                 </div>
             </div>
             `;
+
+				$('#cart-items').append(singleProduct);
 				// Funktion för att uppdatera antal
 				$('#cart-items').on('click', '.update-quantity', function (e) {
 					e.preventDefault();
@@ -170,8 +172,6 @@ if (!cartItems || cartItems.length === 0) {
 					}
 				});
 			});
-
-			$('#cart-items').append(singleProduct);
 
 			// Slut på varukorgsloop
 
