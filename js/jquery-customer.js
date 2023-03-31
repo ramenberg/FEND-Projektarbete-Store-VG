@@ -5,17 +5,17 @@ $(document).ready(function () {
 		const container = $('#confirmation-customer-info');
 		container.html(`
 		<div class="row d-flex justify-content-between">
-			<div class="col-md-12">
-				<small>Adress:</small>
+			<div class="col-md-12 ps-5">
+				<small class="text-muted">Adress:</small>
 				<p>${customer.firstName} ${customer.lastName}<br>
 				${customer.address}<br>
 				${customer.postalCode} ${customer.city}<br>
 				${customer.country}</p>
 			</div>
 			<div>
-				<small>E-mail:</small>
+				<small class="text-muted">E-mail:</small>
 				<p>${customer.email}</p>
-				<small>Telefon:</small>
+				<small class="text-muted">Telefon:</small>
 				<p>${customer.phone}</p>
 			</div>
 		</div>

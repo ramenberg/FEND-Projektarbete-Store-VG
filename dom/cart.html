@@ -1,40 +1,61 @@
-<div class="row border-top border-bottom justify-content-between">
-	<div class="col-12 w-100">
-		<div class="row main justify-content-between">
+<div
+	class="row border-bottom cart-item"
+	data-product-id="${
+	product.id
+}">
+	<div class="col w-100 d-flex justify-content-between px-3">
+		<div class="row main w-100 py-2 px-3">
 			<!-- Image -->
-			<div class="col-2 cart-image">
+			<div class="col cart-image d-block">
 				<img class="img-fluid" src="${product.image}" />
 			</div>
 			<!-- Title -->
-			<div class="cart-content col-10">
-				<div class="row">
-					<div class="col">${product.title}</div>
-					<div class="col"><span class="close">&#10005;</span></div>
+			<div class="cart-content col px-0">
+				<div
+					class="col cart-content-info d-flex justify-content-between align-items-baseline">
+					<span class="col cart-item-title">${ product.title }</span>
+					<!-- Kryss/ta bort -->
+					<a href="#" title="Ta bort vara" class="remove-item">
+						<span class="text-danger text-right">&#10005;</span>
+					</a>
 				</div>
 				<!-- Quantity -->
 				<div class="row">
-					<div class="col cart-content-info">
-						<div class="col single-price">${product.price.toFixed(2)}</div>
-						<div
-							class="col d-flex align-items-center justify-content-center quantity">
-							<input
-								type="number"
-								class="form-control"
-								id="cart_quantity"
-								value="${product.quantity}"
-								min="0"
-								max="20"
-								placeholder="antal_av_varan"
-								name="cart_quantity" />
+					<div
+						class="col cart-content-info d-flex justify-content-between align-items-baseline">
+						<span class="col single-price text-muted"
+							>${product.price.toFixed( 2 )} kr / st</span
+						>
+						<div class="col-3 cart-quantity-buttons m-2">
+							<span class="col">
+								<input
+									type="number"
+									class="form-control border-0 cart-quantity-input"
+									id="cart_quantity_${product.id}"
+									value="${product.quantity}"
+									min="0"
+									max="20"
+									placeholder="antal_av_varan"
+									name="cart_quantity" />
+							</span>
+							<!-- Uppdatera antal -->
+							<a
+								href="#"
+								class="update-quantity"
+								title="Uppdatera antal"
+								data-input-id="cart_quantity_${
+					product.id
+				}"
+								><span class="text-center">&#11118;</span></a
+							>
 						</div>
-						<div class="col d-flex align-items-center justify-content-center">
-							<span class="reload">&#x21bb;</span>
-						</div>
+						<span class="col-3 text-bold text-right"
+							>${( product.price * product.quantity ).toFixed(2)} kr
+						</span>
 					</div>
 				</div>
 			</div>
 			<!-- Totalpris för varan beroende på antal-->
-			<div class="col-1">${(product.price * product.quantity).toFixed(2)}</div>
 		</div>
 	</div>
 </div>

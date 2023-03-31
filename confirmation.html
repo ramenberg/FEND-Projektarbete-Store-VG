@@ -35,24 +35,24 @@
 					<h1>Tack för din beställning!</h1>
 				</div>
 				<!-- Produktinfo BÖRJAR -->
-				<div class="row">
+				<div class="row before-cart">
 					<div class="col-md-8 order-md-1 mb-4">
 						<div class="right-order-info">
 							<h4
 								class="d-flex justify-content-between align-items-center mb-3">
 								<span class="text-muted">Din beställning innehåller:</span>
 							</h4>
-							<ul class="list-group mb-3" id="confirmation-order-right-info">
-								<!-- start dom-->
-
-								<!-- end-->
-							</ul>
+							<div class="row border-bottom cart-item">
+								<div
+									class="col w-100 d-flex justify-content-between px-3 pre-info"></div>
+							</div>
+							<div id="confirmed-items" class="summary"></div>
 						</div>
 					</div>
 					<!-- Produktinfo SLUTAR -->
 					<!-- Kundinfo börjar-->
 					<div class="col-md-4 order-md-2">
-						<h6 class="mb-3">Vi kommer att skicka till:</h6>
+						<h5 class="mb-3">Vi kommer att skicka till:</h5>
 						<div class="mb-3" id="confirmation-customer-info"></div>
 						<!-- Kundinfo SLUTAR-->
 					</div>
@@ -68,7 +68,7 @@
 				$('#footer').load('dom/footer.html');
 			});
 		</script>
-		<script src="js/jquery-product.js"></script>
+		<script src="js/confirmation.js"></script>
 		<script src="js/jquery-customer.js"></script>
 	</body>
 </html>

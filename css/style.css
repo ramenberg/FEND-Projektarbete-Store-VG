@@ -179,3 +179,8 @@ input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
 	opacity: 1;
 }
+.cart-icon {
+	padding-top: 8px;
+	max-height: 30px;
+	max-width: 30px;
+}

@@ -43,14 +43,14 @@
 								class="d-flex justify-content-between align-items-center mb-3">
 								<span class="text-muted">Din beställning innehåller:</span>
 							</h4>
-							<ul class="list-group mb-3" id="order-right-info">
-								<!-- start dom-->
-
-								<!-- end-->
-							</ul>
+							<div class="row border-bottom cart-item">
+								<div
+									class="col w-100 d-flex justify-content-between px-3 cart-pre-info"></div>
+							</div>
+							<div id="cart-items-checkout" class="summary"></div>
 						</div>
 					</div>
-					<div class="col-md-8 order-md-1">
+					<div class="col-md-8 order-md-1" id="form">
 						<h4 class="mb-3">Beställningsformulär</h4>
 						<form
 							class="needs-validation"
@@ -168,7 +168,7 @@
 				</div>
 
 				<!-- Beställningsformulär slutar-->
-				<div id="footer"></div>
+				<div id="footer" class="col"></div>
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -178,7 +178,7 @@
 				$('#footer').load('dom/footer.html');
 			});
 		</script>
-		<script src="js/jquery-product.js"></script>
+		<script src="js/cart.js"></script>
 		<script src="js/validateForm.js"></script>
 	</body>
 </html>
