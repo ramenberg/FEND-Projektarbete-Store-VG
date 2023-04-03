@@ -172,13 +172,14 @@
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<script src="js/main.js"></script>
 		<script>
 			$(document).ready(function () {
 				$('#navbar').load('dom/nav.html');
 				$('#footer').load('dom/footer.html');
+				renderCartProducts();
+				validateForm();
 			});
 		</script>
-		<script src="js/cart.js"></script>
-		<script src="js/validateForm.js"></script>
 	</body>
 </html>

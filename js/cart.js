@@ -118,7 +118,7 @@ if (!cartItems || cartItems.length === 0) {
             </div>
             `;
 
-				$('#cart-items').append(singleProduct);
+				$('#cart-items').html(singleProduct);
 				// Funktion för att uppdatera antal
 				$('#cart-items').on('click', '.update-quantity', function (e) {
 					e.preventDefault();
