@@ -293,7 +293,12 @@ function validateForm() {
 		}
 	});
 }
-
+// Körs på confirmation för att hämta produkter, kundinfo och sedan tömma varukorgen.
+function renderConfirmation() {
+	renderConfirmationProducts();
+	renderCustomerInformation();
+	emptyCartNonReload();
+}
 // Visar beställda produkter på bekräftelsesidan.
 function renderConfirmationProducts() {
 	const cartItems = localStorage.getItem('fs-cart');
@@ -715,13 +720,6 @@ function renderCustomerInformation() {
 	} else {
 		console.log('Ingen kund vald eller sessionStorage är tom.');
 	}
-}
-
-// Körs på confirmation för att hämta produkter, kundinfo och sedan tömma varukorgen.
-function renderConfirmation() {
-	renderConfirmationProducts();
-	renderCustomerInformation();
-	emptyCartNonReload();
 }
 
 // Div mindre funktioner
