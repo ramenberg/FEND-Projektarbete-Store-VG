@@ -295,9 +295,11 @@ function validateForm() {
 }
 // Körs på confirmation för att hämta produkter, kundinfo och sedan tömma varukorgen.
 function renderConfirmation() {
-	renderConfirmationProducts();
-	renderCustomerInformation();
-	emptyCartNonReload();
+	$(document).ready(function () {
+		renderConfirmationProducts();
+		renderCustomerInformation();
+		emptyCartNonReload();
+	});
 }
 // Visar beställda produkter på bekräftelsesidan.
 function renderConfirmationProducts() {
