@@ -316,7 +316,6 @@ function renderConfirmationProducts() {
 		$('.before-cart').html(emptyCart);
 	} else {
 		const cart = JSON.parse(cartItems);
-		let checkoutFinished = false;
 
 		if (cart.length === 0) {
 			console.log('Varukorgen är tom');
@@ -351,7 +350,6 @@ function renderConfirmationProducts() {
 			<div class="cart-item-price text-bold">Pris</div>
 			`;
 				$('.pre-info').append(preInfo);
-				console.log('preinfo körs');
 				// Loopa igenom varukorgen och skriv ut varje produkt
 				let singleProduct = '';
 				cart.forEach(function (product) {
@@ -397,8 +395,6 @@ function renderConfirmationProducts() {
             `;
 				});
 				$('#confirmed-items').append(singleProduct);
-				console.log(cart.length);
-				console.log('körs');
 				// Summeringsinfo
 				let summaryInfo = `
             <div class="pt-5 mx-2">
@@ -420,13 +416,7 @@ function renderConfirmationProducts() {
             `;
 
 				$('.summary').append(summaryInfo);
-				checkoutFinished = true;
 			}
-		}
-		if (checkoutFinished === true) {
-			console.log('checkoutFinished är true');
-		} else {
-			console.log('checkoutFinished är false');
 		}
 	}
 }
@@ -538,7 +528,6 @@ function renderCart(cartArray, cartSum, totalItems) {
 		$('#cart-items').on('click', '.remove-item', function (e) {
 			e.preventDefault();
 			let productId = $(this).closest('.cart-item').data('product-id');
-			console.log(productId);
 
 			for (let i = 0; i < cart.length; i++) {
 				if (cart[i].id === productId) {
